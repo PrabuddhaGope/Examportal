@@ -50,8 +50,8 @@ function calculate_and_submit_marks($conn,$total_noof_questions,$marks_of_each_q
     //Updating data in mysql table
     $sql3 = "UPDATE `user_login_data` SET `marks` = '$marks', `exam_status`= '1' WHERE `user_login_data`.`mem_email` = '$mem_email';";
     $sql3 .= "UPDATE `$mem_clgname` SET `marks` = '$marks' WHERE `$mem_clgname`.`mem_email` = '$mem_email'";
-    echo $marks;
-    echo "<br>" . $mem_email . "<br>";
+    // echo $marks;
+    // echo "<br>" . $mem_email . "<br>";
     $result = mysqli_multi_query($conn,$sql3);
 
     if($result){

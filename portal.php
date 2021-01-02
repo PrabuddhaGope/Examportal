@@ -79,7 +79,7 @@
     var nowa = new Date().getTime();
 
    if(localStorage.getItem('deadline') == null){
-        var deadline =  nowa + (1000 * 60 *2 );
+        var deadline =  nowa + (1000 * 60 *120 );
         localStorage.setItem('deadline',deadline)
         // deadline is written only if localstorage is empty
     }
@@ -168,7 +168,14 @@
           <!-- Display question number and the question -->
           <p class="question-text" style="font-size: 1.3rem;">
             <strong><?php echo "Q. ". $Q_no . " " ?></strong><?php echo $question ?>
-            <?php if($image_url != ""){ ?><img src=<?php echo $image_url ?> alt="Stickman" width="200" height="200"> <?php }else{ } ?>
+            <?php
+              if($image_url != "")
+                { ?>
+                  <div class="row">
+                    <img src=<?php echo $image_url ?> alt="Stickman" width="200" height="200">
+                  </div>
+
+            <?php }else{ } ?>
           </p>
 
           <form class="white" action="portal.php" method="POST">

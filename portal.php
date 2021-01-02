@@ -79,7 +79,7 @@
     var nowa = new Date().getTime();
 
    if(localStorage.getItem('deadline') == null){
-        var deadline =  nowa + (1000 * 60 * 60 * 2);
+        var deadline =  nowa + (1000 * 60 *2 );
         localStorage.setItem('deadline',deadline)
         // deadline is written only if localstorage is empty
     }
@@ -135,6 +135,7 @@
             $option1 = $_SESSION['selected_question_details'][2];
             $option2 = $_SESSION['selected_question_details'][3];
             $option3 = $_SESSION['selected_question_details'][4];
+            $image_url = $_SESSION['selected_question_details'][5];
             $checked1 = "";$checked2 = "";$checked3 = "";
             // echo "Q" . $Q_no;
             if(isset($_SESSION['answer_of_question'][$Q_no])){
@@ -167,6 +168,7 @@
           <!-- Display question number and the question -->
           <p class="question-text" style="font-size: 1.3rem;">
             <strong><?php echo "Q. ". $Q_no . " " ?></strong><?php echo $question ?>
+            <?php if($image_url != ""){ ?><img src=<?php echo $image_url ?> alt="Stickman" width="200" height="200"> <?php }else{ } ?>
           </p>
 
           <form class="white" action="portal.php" method="POST">

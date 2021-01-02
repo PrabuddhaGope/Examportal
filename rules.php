@@ -68,9 +68,13 @@ if(isset($_POST['to_portal'])){
           </nav>
         <h4 class="text-center pt-4">Your payment is overdue.</h4>
         <p class="text-center">Click the button below to pay the fee and resume with exam</p>
-         <form action="rules.php" method="POST" class="text-center">
-         <input type="submit" class="btn btn-primary" name="loginpage" value="Pay" >
+         <form class="text-center pt-3">
+           <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_FtzC22qacomokD"> </script>
          </form>
+        <div class="text-center">
+          <img src="images/Untitled-2-02.jpg" alt="payment graphic" width="500px" />
+        </div>
+
     </body>
     <?php } else if($_SESSION['payment_status'] == true and $_SESSION['exam_status'] == true){?>
       <body>

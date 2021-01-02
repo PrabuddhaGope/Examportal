@@ -62,9 +62,9 @@
 <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
     <div class="container">
       <div class="card login-card">
-        <div class="row no-gutters">
-          <div class="col-md-5">
-            <img src="assets/images/login.jpg" alt="login" class="login-card-img">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-5 d-md-none d-lg-block">
+            <img src="../images/signup.jpg" alt="login" class="login-card-img">
           </div>
           <div class="col-md-7">
             <div class="card-body">
